@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live Text Display</title>
+</head>
+
+<body>
+
+    <h3>Type something:</h3>
+
+    <input type="text" id="myInput" oninput="showText()">
+
+    <div id="displayBox" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <script>
+        function showText() {
+            var input = document.getElementById("myInput").value;
+            document.getElementById("displayBox").innerText = input;
+        }
+    </script>
+
+</body>
+
+</html>
