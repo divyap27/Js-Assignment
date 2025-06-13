@@ -1,4 +1,4 @@
-# ✨ Event Handling Assignments (Beginner Level)
+# ✨ Event Handling Assignments 
 
 This folder contains JavaScript assignments that demonstrate **basic event handling** using HTML and JavaScript. Each example is simple, interactive, and great for learning how to manipulate the DOM and respond to user actions.
 
