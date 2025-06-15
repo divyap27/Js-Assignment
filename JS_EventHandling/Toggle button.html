@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Paragraph using JS DOM</title>
+</head>
+<body>
+
+<script>
+  
+  const button = document.createElement("button");
+  button.textContent = "Show Paragraph";
+  button.style.padding = "10px 20px";
+  button.style.fontSize = "16px";
+  button.style.cursor = "pointer";
+  button.style.marginBottom = "10px";
+  button.style.backgroundColor = "skyblue";
+  button.style.color = "green";
+
+ 
+  const paragraph = document.createElement("p");
+  paragraph.textContent = `This is a paragraph created using JavaScript!
+JavaScript is a powerful programming language used to make web pages interactive.
+It can be used to create dynamic content, control multimedia, animate images, and much more.
+By using the DOM (Document Object Model), JavaScript can add, remove, or change HTML elements and styles on the fly.
+This makes JavaScript a key tool for front-end developers building modern web applications.`;
+
+  paragraph.style.whiteSpace = "pre-line";
+  paragraph.style.display = "none";
+  paragraph.style.fontSize = "18px";
+  paragraph.style.color = "#333";
+
+  document.body.appendChild(button);
+  document.body.appendChild(paragraph);
+
+  
+  button.addEventListener("click", () => {
+    const isHidden = paragraph.style.display === "none";
+    paragraph.style.display = isHidden ? "block" : "none";
+    button.textContent = isHidden ? "Hide Paragraph" : "Show Paragraph";
+  });
+</script>
+
+</body>
+</html>

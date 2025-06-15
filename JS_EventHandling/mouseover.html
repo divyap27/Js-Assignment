@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Div Color Change</title>
+</head>
+<body>
+
+<script>
+  
+  const myDiv = document.createElement("div");
+  myDiv.textContent = "Hover over this box!";
+  
+  myDiv.style.width = "300px";
+  myDiv.style.height = "100px";
+  myDiv.style.lineHeight = "100px";
+  myDiv.style.textAlign = "center";
+  myDiv.style.backgroundColor = "white";
+  myDiv.style.border = "2px solid #ccc";
+  myDiv.style.fontSize = "20px";
+  myDiv.style.cursor = "pointer";
+  myDiv.style.transition = "background-color 0.3s ease";
+
+  myDiv.addEventListener("mouseover", () => {
+    myDiv.style.backgroundColor = "lightblue";
+  });
+
+  myDiv.addEventListener("mouseout", () => {
+    myDiv.style.backgroundColor = "white";
+  });
+
+  document.body.appendChild(myDiv);
+</script>
+
+</body>
+</html>

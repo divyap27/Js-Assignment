@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click Counter</title>
+</head>
+
+<body>
+
+    <script>
+
+        let count = 0;
+
+
+        const button = document.createElement("button");
+        button.textContent = "Click Me";
+        button.style.padding = "10px 20px";
+        button.style.fontSize = "16px";
+        button.style.cursor = "pointer";
+        button.style.marginBottom = "10px";
+        button.style.backgroundColor = "#4CAF50";
+        button.style.color = "white";
+        button.style.border = "none";
+        button.style.borderRadius = "5px";
+
+
+        const counterDisplay = document.createElement("p");
+        counterDisplay.textContent = "clicked 0 times";
+        counterDisplay.style.fontSize = "18px";
+        counterDisplay.style.color = "#333";
+
+
+        button.addEventListener("click", () => {
+            count++;
+            counterDisplay.textContent = `clicked ${count} time${count > 1 ? 's' : ''}`;
+        });
+
+
+        document.body.appendChild(button);
+        document.body.appendChild(counterDisplay);
+    </script>
+
+</body>
+
+</html>

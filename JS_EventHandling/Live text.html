@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Live Text Display</title>
+</head>
+<body>
+    <script>
+  
+  const input = document.createElement("input");
+  input.type = "text";
+  input.placeholder = "Type something...";
+  input.style.padding = "10px";
+  input.style.fontSize = "16px";
+  input.style.width = "300px";
+  input.style.marginBottom = "15px";
+
+  const displayDiv = document.createElement("div");
+  displayDiv.style.border = "1px solid #ccc";
+  displayDiv.style.padding = "10px";
+  displayDiv.style.width = "300px";
+  displayDiv.style.minHeight = "30px";
+  displayDiv.style.fontSize = "16px";
+  displayDiv.style.backgroundColor = "#f9f9f9";
+
+
+  input.addEventListener("input", () => {
+    displayDiv.textContent = input.value;
+  });
+
+  document.body.appendChild(input);
+  document.body.appendChild(displayDiv);
+</script>
+
+</body>
+</html>
